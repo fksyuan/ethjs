@@ -58,7 +58,7 @@ Note, exports to `window.Eth` global.
 ## Usage
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('https://ropsten.infura.io'));
 
 eth.getBlockByNumber(45300, true, (err, block) => {

@@ -11,7 +11,7 @@ npm install --save ethjs
 ## Usage
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('https://ropsten.infura.io'));
 
 eth.getBlockByNumber(45300, (err, block) => {
@@ -254,7 +254,7 @@ Intakes the contract Ethereum standard ABI schema, optionally the contract bytec
 Result `ContractFactory` **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 // the abi
@@ -296,7 +296,7 @@ Result a single Promise **Object** instance.
 
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 // the abi
@@ -332,7 +332,7 @@ The contract factory has two methods, 'at' and 'new' which can be used to create
 Result a single `Contract` **Object** instance.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 // the abi
@@ -377,7 +377,7 @@ In this contract, the `SetComplete` event is fired when the `set` method has set
 You will notice the `simpleStore` instance makes all these methods available to it.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 // the abi
@@ -432,7 +432,7 @@ Convert a single Ethereum denominated value at a specified unit, and convert it 
 Result output single BN **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 
 var val1 = Eth.toWei(249824778, 'ether');
 
@@ -453,7 +453,7 @@ Convert a wei denominated value into another Ethereum denomination. Intakes a si
 Result output single **String** number.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 
 var val1 = Eth.fromWei(249824778000000000000000000, 'ether');
 
@@ -474,7 +474,7 @@ Intakes a `provider` URL specified as a string, and optionally the `timeout` spe
 Result `HttpProvider` **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.accounts((err, result) => {
@@ -495,7 +495,7 @@ Intakes a single string and outputs a 32 byte (66 utf-8 byte) sha3 Keccak hex st
 Result output hex **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 
 console.log(Eth.keccak256('skfjksdfjksdjksd'));
 
@@ -509,7 +509,7 @@ console.log(Eth.keccak256('skfjksdfjksdjksd'));
 Used to manage Ethereum event listening and filtering.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new HttpProvider('http://localhost:8545'));
 
 const filter = new eth.filters.Filter({ delay: 300 })
@@ -570,7 +570,7 @@ none.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.web3_clientVersion()
@@ -601,7 +601,7 @@ The keccak 256 sha3 hash of the data.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.web3_sha3("0.1.6")
@@ -631,7 +631,7 @@ none.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.net_version()
@@ -661,7 +661,7 @@ none.
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.net_peerCount()
@@ -691,7 +691,7 @@ none.
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.net_listening()
@@ -721,7 +721,7 @@ none.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.protocolVersion()
@@ -751,7 +751,7 @@ none.
 Result **"Boolean|EthSyncing"**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.syncing()
@@ -781,7 +781,7 @@ none.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.coinbase()
@@ -811,7 +811,7 @@ none.
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.mining()
@@ -841,7 +841,7 @@ none.
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.hashrate()
@@ -871,7 +871,7 @@ none.
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.gasPrice()
@@ -901,7 +901,7 @@ none.
 Result an **Array** of strings.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.accounts()
@@ -931,7 +931,7 @@ none.
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.blockNumber()
@@ -963,7 +963,7 @@ Returns the balance of the account of given address.
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getBalance("0x6e0E0e02377Bc1d90E8a7c21f12BA385C2C35f78", <BN ...>)
@@ -996,7 +996,7 @@ Returns the value from a storage position at a given address.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getStorageAt("0x6e0E0e02377Bc1d90E8a7c21f12BA385C2C35f78", <BN ...>, <BN ...>)
@@ -1028,7 +1028,7 @@ Returns the number of transactions *sent* from an address.
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getTransactionCount("0x6e0E0e02377Bc1d90E8a7c21f12BA385C2C35f78", <BN ...>)
@@ -1059,7 +1059,7 @@ Returns the number of transactions in a block from a block matching the given bl
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getBlockTransactionCountByHash("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbab45")
@@ -1090,7 +1090,7 @@ Returns the number of transactions in a block from a block matching the given bl
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getBlockTransactionCountByNumber(<BN ...>)
@@ -1121,7 +1121,7 @@ Returns the number of uncles in a block from a block matching the given block ha
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getUncleCountByBlockHash("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbab45")
@@ -1152,7 +1152,7 @@ Returns the number of uncles in a block from a block matching the given block nu
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getUncleCountByBlockNumber(<BN ...>)
@@ -1184,7 +1184,7 @@ Returns code at a given address.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getCode("0x6e0E0e02377Bc1d90E8a7c21f12BA385C2C35f78", <BN ...>)
@@ -1216,7 +1216,7 @@ Signs data with a given address.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.sign("0x6e0E0e02377Bc1d90E8a7c21f12BA385C2C35f78", "0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbab45")
@@ -1247,7 +1247,7 @@ Creates new message call transaction or a contract creation, if the data field c
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.sendTransaction({
@@ -1284,7 +1284,7 @@ Creates new message call transaction or a contract creation for signed transacti
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.sendRawTransaction("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbabd40cb8da3")
@@ -1316,7 +1316,7 @@ Executes a new message call immediately without creating a transaction on the bl
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.call({
@@ -1354,7 +1354,7 @@ Makes a call or transaction, which won't be added to the blockchain and returns 
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.estimateGas({
@@ -1391,7 +1391,7 @@ Returns information about a block by hash.
 Result Block **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getBlockByHash("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbab45", true)
@@ -1443,7 +1443,7 @@ Returns information about a block by block number.
 Result Block **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getBlockByNumber(<BN ...>, true)
@@ -1494,7 +1494,7 @@ Returns the information about a transaction requested by transaction hash.
 Result Transaction **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getTransactionByHash("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbab45")
@@ -1538,7 +1538,7 @@ Returns information about a transaction by block hash and transaction index posi
 Result Transaction **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getTransactionByBlockHashAndIndex("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbab45", <BN ...>)
@@ -1582,7 +1582,7 @@ Returns information about a transaction by block number and transaction index po
 Result Transaction **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getTransactionByBlockNumberAndIndex(<BN ...>, <BN ...>)
@@ -1625,7 +1625,7 @@ Returns the receipt of a transaction by transaction hash.
 Result receipt **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getTransactionReceipt("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbab45")
@@ -1675,7 +1675,7 @@ Returns information about a uncle of a block by hash and uncle index position.
 Result Block **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getUncleByBlockHashAndIndex("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbab45", <BN ...>)
@@ -1727,7 +1727,7 @@ Returns information about a uncle of a block by number and uncle index position.
 Result Block **Object**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getUncleByBlockNumberAndIndex(<BN ...>, <BN ...>)
@@ -1777,7 +1777,7 @@ none.
 Result an **Array** of strings.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getCompilers()
@@ -1808,7 +1808,7 @@ Returns compiled LLL code.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.compileLLL("0.1.6")
@@ -1839,7 +1839,7 @@ Returns compiled solidity code.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.compileSolidity("0.1.6")
@@ -1870,7 +1870,7 @@ Returns compiled serpent code.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.compileSerpent("0.1.6")
@@ -1901,7 +1901,7 @@ Creates a filter object, based on filter options, to notify when the state chang
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.newFilter({
@@ -1936,7 +1936,7 @@ none.
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.newBlockFilter()
@@ -1966,7 +1966,7 @@ none.
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.newPendingTransactionFilter()
@@ -1997,7 +1997,7 @@ Uninstalls a filter with given id. Should always be called when watch is no long
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.uninstallFilter(<BN ...>)
@@ -2028,7 +2028,7 @@ Polling method for a filter, which returns an array of logs which occurred since
 Result an **Array** of filter change objects..
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getFilterChanges(<BN ...>)
@@ -2069,7 +2069,7 @@ Returns an array of all logs matching filter with given id.
 Result an **Array** of filter change objects..
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getFilterLogs(<BN ...>)
@@ -2110,7 +2110,7 @@ Returns an array of all logs matching a given filter object.
 Result **Array**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getLogs({
@@ -2155,7 +2155,7 @@ none.
 Result an **Array** of strings.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.getWork()
@@ -2188,7 +2188,7 @@ Used for submitting a proof-of-work solution.
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.submitWork("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbabd40cb8da3", "0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbab45", "0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbab45")
@@ -2220,7 +2220,7 @@ Used for submitting mining hashrate.
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.submitHashrate("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbabd40cb8da3", "0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbabd40cb8da3")
@@ -2253,7 +2253,7 @@ Stores a string in the local database.
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.db_putString("0.1.6", "0.1.6", "0.1.6")
@@ -2285,7 +2285,7 @@ Returns string from the local database.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.db_getString("0.1.6", "0.1.6")
@@ -2318,7 +2318,7 @@ Stores binary data in the local database.
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.db_putHex("0.1.6", "0.1.6", "0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbabd40cb8da3")
@@ -2350,7 +2350,7 @@ Returns binary data from the local database.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.db_getHex("0.1.6", "0.1.6")
@@ -2381,7 +2381,7 @@ Sends a whisper message.
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.shh_post({
@@ -2418,7 +2418,7 @@ none.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.shh_version()
@@ -2448,7 +2448,7 @@ none.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.shh_newIdentity()
@@ -2479,7 +2479,7 @@ Checks if the client hold the private keys for a given identity.
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.shh_hasIdentity("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbabd40cb8da3")
@@ -2509,7 +2509,7 @@ none.
 Result **String**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.shh_newGroup()
@@ -2540,7 +2540,7 @@ Adds an identity to an SHH group.
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.shh_addToGroup("0xbf2b4596cbd1511f4a6ef8af06d03354f53cb8aa9508a6810b6f93d8bccbabd40cb8da3")
@@ -2571,7 +2571,7 @@ Creates filter to notify, when client receives whisper message matching the filt
 Result **BN**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.shh_newFilter({
@@ -2605,7 +2605,7 @@ Uninstalls a filter with given id. Should always be called when watch is no long
 Result **Boolean**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.shh_uninstallFilter(<BN ...>)
@@ -2636,7 +2636,7 @@ Polling method for whisper filters. Returns new messages since the last call of 
 Result **["SHHFilterChange"]**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.shh_getFilterChanges(<BN ...>)
@@ -2677,7 +2677,7 @@ Get all messages matching a filter. Unlike 'shh_getFilterChanges' this returns a
 Result **["SHHFilterChange"]**.
 
 ```js
-const Eth = require('ethjs');
+const Eth = require('@fksyuan/ethjs');
 const eth = new Eth(new Eth.HttpProvider('http://localhost:8545'));
 
 eth.shh_getMessages(<BN ...>)
