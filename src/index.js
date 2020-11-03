@@ -1,6 +1,6 @@
 const EthQuery = require('@fksyuan/ethjs-query');
 const EthFilter = require('ethjs-filter');
-const EthContract = require('ethjs-contract');
+const EthContract = require('@fksyuan/ethjs-contract');
 const HttpProvider = require('ethjs-provider-http');
 const abi = require('@fksyuan/ethjs-abi');
 // const getTxSuccess = require('ethjs-transaction-success'); // eslint-disable-line
